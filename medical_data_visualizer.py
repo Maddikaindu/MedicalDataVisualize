@@ -33,7 +33,6 @@ def draw_heat_map():
         ]
     corr=df_heat.corr()
     mask=np.triu(np.ones(corr.shape,dtype=bool))
-    mask = np.triu(np.ones(corr.shape, dtype=bool))
     fig, ax = plt.subplots(figsize=(12, 6)) 
     sns.heatmap(corr, mask=mask, ax=ax, annot=True, fmt=".1f")
     fig.savefig("heatmap.png") 
